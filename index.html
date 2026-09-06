@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loto de Baulay – Les lots</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics 4 : remplace G-XXXXXXXXXX par ton identifiant -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <div class="balls"><span>7</span><span>12</span><span>3</span></div>
+    <p class="eyebrow">LOTO DE BAULAY</p>
+    <h1>🎉 Les lots du loto 🎉</h1>
+    <p class="date">Samedi 26 septembre 2026 · 20h00</p>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div><strong>13</strong><small>parties</small></div>
+      <div><strong>3</strong><small>quines / partie</small></div>
+      <div><strong>39</strong><small>lots</small></div>
+      <div><strong>1</strong><small>super lot</small></div>
+    </section>
+
+    <section class="intro">
+      <h2>Découvrez les lots</h2>
+      <p>Scannez le QR code d’un lot pour découvrir sa photo, sa description et son partenaire.</p>
+    </section>
+
+    <section id="lots" class="lots-grid"></section>
+
+    <section class="qr-help">
+      <div class="qr-icon">▦</div>
+      <div>
+        <strong>Vous avez un QR code ?</strong>
+        <p>Scannez-le directement pour arriver sur le lot correspondant.</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="#top">⌂<span>Accueil</span></a>
+    <a href="#lots">🎁<span>Les lots</span></a>
+    <a href="#infos">ⓘ<span>Infos</span></a>
+  </nav>
+
+  <script src="lots.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const lot = params.get('lot');
+    if (lot) {
+      window.addEventListener('load', () => {
+        const el = document.getElementById('lot-' + lot);
+        if (el) setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'center'}), 250);
+        if (typeof gtag === 'function') {
+          gtag('event', 'lot_consultation', {lot_id: lot});
+        }
+      });
+    }
+  </script>
+</body>
+</html>

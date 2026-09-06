@@ -1,0 +1,28 @@
+*{box-sizing:border-box}
+:root{--blue:#083f82;--blue2:#1265b0;--green:#65c63b;--light:#eef8ff;--text:#12345b}
+body{margin:0;font-family:Arial,sans-serif;background:#f7fbff;color:var(--text);padding-bottom:76px}
+.hero{background:linear-gradient(145deg,#eaf8ff,#fff);padding:24px 18px 22px;text-align:center;border-bottom:4px solid var(--green);overflow:hidden}
+.eyebrow{margin:0;color:var(--blue2);font-weight:800;letter-spacing:2px}
+h1{font-size:34px;margin:8px 0;color:var(--blue)}
+.date{margin:0;font-weight:700;color:#4b6d8e}
+.balls{display:flex;justify-content:center;gap:8px;margin-bottom:10px}
+.balls span{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-weight:900;font-size:24px;box-shadow:0 4px 10px #0002}
+.balls span:nth-child(2){background:#2196e6}.balls span:nth-child(3){background:#e95aa2}
+main{max-width:900px;margin:auto;padding:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:18px;box-shadow:0 3px 14px #164b7315;padding:12px;margin-bottom:18px}
+.stats div{text-align:center;border-right:1px solid #d9e8f5}.stats div:last-child{border:0}
+.stats strong{display:block;font-size:25px;color:var(--blue)}.stats small{font-size:11px}
+.intro{text-align:center;margin:18px 0}.intro h2{font-size:28px;color:var(--blue);margin:8px}
+.intro p{margin:0;color:#55718d}
+.lots-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:white;border:2px solid #36b9a4;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px #164b7312}
+.card .photo{height:145px;background:linear-gradient(135deg,#dbeeff,#f6fff2);display:grid;place-items:center;font-size:48px}
+.card-body{padding:12px}.partie{display:inline-block;background:var(--blue);color:#fff;border-radius:8px;padding:5px 8px;font-size:12px;font-weight:800}
+.card h3{margin:9px 0 5px;color:var(--blue);font-size:19px}.card p{margin:5px 0;font-size:13px;line-height:1.35}
+.value{display:inline-block;background:var(--green);color:#fff;border-radius:14px;padding:5px 9px;font-weight:800;font-size:13px;margin:6px 0}
+.partner{font-size:12px;color:#315d82;margin:4px 0 9px}
+.btn{display:block;text-align:center;background:var(--blue);color:white;text-decoration:none;border-radius:12px;padding:10px;font-weight:800}
+.qr-help{display:flex;gap:12px;align-items:center;background:#dff3ff;border-radius:16px;margin:18px 0;padding:15px}.qr-icon{font-size:44px}.qr-help p{margin:4px 0;font-size:13px}
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;background:#06375f;display:flex;justify-content:space-around;padding:10px 6px;z-index:10}
+.bottom-nav a{color:white;text-decoration:none;text-align:center;font-size:20px}.bottom-nav span{display:block;font-size:10px;margin-top:3px}
+@media(max-width:600px){.lots-grid{grid-template-columns:1fr 1fr}.card .photo{height:110px}.card h3{font-size:16px}.stats strong{font-size:21px}h1{font-size:30px}}
