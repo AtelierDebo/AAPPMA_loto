@@ -66,5 +66,31 @@
       });
     }
   </script>
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const partie = params.get("partie");
+  const lot = params.get("lot");
+
+  function go() {
+    if (partie) {
+      const el = document.getElementById("partie-" + partie);
+      if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
+      if (typeof gtag === "function") {
+        gtag("event", "partie_consultation", {partie_id: partie});
+      }
+    } else if (lot) {
+      const el = document.getElementById("lot-" + lot);
+      if (el) el.scrollIntoView({behavior:"smooth", block:"center"});
+      if (typeof gtag === "function") {
+        gtag("event", "lot_consultation", {lot_id: lot});
+      }
+    }
+  }
+  window.addEventListener("load", () => setTimeout(go, 300));
+})();
+</script>
+
 </body>
 </html>

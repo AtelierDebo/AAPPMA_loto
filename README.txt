@@ -1,16 +1,16 @@
-# Loto de Baulay – page des lots
+# Loto AAPPMA de Baulay – pack GitHub Pages
 
-Projet prévu pour GitHub Pages.
+Pack mis à jour à partir de `lot.xlsx`, onglet `lots par partie`.
 
-## Principe
-- 1 page web mobile.
-- 40 lots.
-- Chaque QR code pointe vers `?lot=NUMERO`.
-- Exemple : `https://TON-COMPTE.github.io/TON-REPO/?lot=17`
-- Google Analytics 4 permet de comptabiliser les consultations par lot.
+Contenu :
+- 13 parties
+- 39 lots
+- 1 Super Lot
+- liens individuels `?lot=1` à `?lot=40`
+- affichage mobile
+- suivi GA4 prévu si un identifiant est configuré
 
-## À compléter
-1. Remplacer `G-XXXXXXXXXX` dans `index.html` par l'identifiant GA4.
-2. Remplir les 40 lots dans `lots.js`.
-3. Ajouter les photos dans un dossier `images/` et remplacer les emojis par les fichiers image.
-4. Générer les 40 QR codes avec les URL de chaque lot.
+Adresse actuelle :
+https://atelierdebo.github.io/AAPPMA_loto/
+
+Pour mettre à jour GitHub : envoyer/remplacer `index.html`, `style.css` et `lots.js`.
