@@ -32,7 +32,7 @@
 
     <section class="intro">
       <h2>Découvrez les lots</h2>
-      <p>Scannez le QR code d’un lot pour découvrir sa photo, sa description et son partenaire.</p>
+      <p>Scannez le QR code d’une partie pour découvrir directement les 3 lots à gagner.</p>
     </section>
 
     <section id="lots" class="lots-grid"></section>
@@ -53,44 +53,6 @@
   </nav>
 
   <script src="lots.js"></script>
-  <script>
-    const params = new URLSearchParams(location.search);
-    const lot = params.get('lot');
-    if (lot) {
-      window.addEventListener('load', () => {
-        const el = document.getElementById('lot-' + lot);
-        if (el) setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'center'}), 250);
-        if (typeof gtag === 'function') {
-          gtag('event', 'lot_consultation', {lot_id: lot});
-        }
-      });
-    }
-  </script>
-
-<script>
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  const partie = params.get("partie");
-  const lot = params.get("lot");
-
-  function go() {
-    if (partie) {
-      const el = document.getElementById("partie-" + partie);
-      if (el) el.scrollIntoView({behavior:"smooth", block:"start"});
-      if (typeof gtag === "function") {
-        gtag("event", "partie_consultation", {partie_id: partie});
-      }
-    } else if (lot) {
-      const el = document.getElementById("lot-" + lot);
-      if (el) el.scrollIntoView({behavior:"smooth", block:"center"});
-      if (typeof gtag === "function") {
-        gtag("event", "lot_consultation", {lot_id: lot});
-      }
-    }
-  }
-  window.addEventListener("load", () => setTimeout(go, 300));
-})();
-</script>
 
 </body>
 </html>

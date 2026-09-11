@@ -26,3 +26,13 @@ main{max-width:900px;margin:auto;padding:14px}
 .bottom-nav{position:fixed;left:0;right:0;bottom:0;background:#06375f;display:flex;justify-content:space-around;padding:10px 6px;z-index:10}
 .bottom-nav a{color:white;text-decoration:none;text-align:center;font-size:20px}.bottom-nav span{display:block;font-size:10px;margin-top:3px}
 @media(max-width:600px){.lots-grid{grid-template-columns:1fr 1fr}.card .photo{height:110px}.card h3{font-size:16px}.stats strong{font-size:21px}h1{font-size:30px}}
+
+.partie-focus {
+  margin: 0 0 16px;
+  padding: 18px;
+  text-align: center;
+  border-radius: 18px;
+  background: #eef7ff;
+}
+.partie-focus h2 { margin: 0 0 6px; }
+.partie-focus p { margin: 0; }

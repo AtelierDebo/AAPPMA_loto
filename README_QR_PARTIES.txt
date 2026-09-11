@@ -1,10 +1,14 @@
-PACK QR CODES — LOTO DE BAULAY
-Samedi 26 septembre 2026
+VERSION QR PAR PARTIE — LOTO DE BAULAY
 
-13 QR codes : 1 par partie.
-Les QR codes ouvrent le site et positionnent directement le joueur sur la partie.
-URL : https://atelierdebo.github.io/AAPPMA_loto/?partie=N
+Fonctionnement :
+- QR Partie 1 -> https://atelierdebo.github.io/AAPPMA_loto/?partie=1 -> affiche uniquement les 3 lots de la partie 1
+- QR Partie 2 -> ?partie=2 -> affiche uniquement les 3 lots de la partie 2
+- ...
+- QR Partie 13 -> ?partie=13 -> affiche uniquement les 3 lots de la partie 13
+- QR Super Lot -> ?lot=40 -> affiche le Super Lot
 
-Super Lot : https://atelierdebo.github.io/AAPPMA_loto/?lot=40
+IMPORTANT :
+Remplacer index.html ET lots.js dans le dépôt GitHub avec cette version.
+style.css peut aussi être remplacé pour le petit habillage de la page Partie.
 
-IMPORTANT : remplacer index.html dans GitHub avec celui de ce pack pour activer les QR par partie.
+Les QR codes déjà générés restent valables.
